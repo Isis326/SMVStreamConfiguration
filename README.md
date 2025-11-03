@@ -8,20 +8,24 @@ It allows users to view, edit, and save phasor data, frequency, phase, and sampl
 
 How to Run the Web Page
 
-CMD: Navigate to your project folder smvConfiguratorWebPage using the commands:
-
-cd ..
-
-cd Users
-
-cd 'Username'
-
-cd Desktop
-
-cd smvConfiguratorWebPage
+go to the project repository
 
 
 
-To run locallySs : php -S localhost:8000
-Open the browser and enter http://localhost:8000/
+To run locallygit: 
+
+1. php -S localhost:8000
+   Open the browser and enter http://localhost:8000/
+
+
+
+2\. C:\\Users\\YourUser\\Desktop\\SMVStreamConfiguration-main
+
+
+
+From the XAMPP open the browser and enter http://localhost:8000/
+
+
+
+
 
