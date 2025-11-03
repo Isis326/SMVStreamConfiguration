@@ -52,69 +52,43 @@
 
   <h1>SMV Stream Configuration</h1>
   <script>
-    function saveButton() {
-        var cycles = document.getElementById("cycles").value;
-        var freq = document.getElementById("freq").value;
-        var phase = document.getElementById("phase").value;
-        var phasor = document.getElementById("phasor").value;
-        var sms = document.getElementById("sms").value;
-        var type = document.getElementById("type").value;
-        var name = document.getElementById("name").value;
-        var rate = document.getElementById("rate").value;
-        
-        if (isNaN(cycles))
-        {
-           	alert("cycles is not numeric");
+   function saveButton() {
+    var cycles = document.getElementById("cycles").value;
+    var freq = document.getElementById("freq").value;
+    var phase = document.getElementById("phase").value;
+    var phasor = document.getElementById("phasor").value;
+    var sms = document.getElementById("sms").value;
+    var type = document.getElementById("type").value;
+    var name = document.getElementById("name").value;
+    var rate = document.getElementById("rate").value;
 
-        }
-        else
-        {
-       
-
-            if(cycles < 0)
-            {
-                alert("Cycles has to be bigger than 0");
-            }
-        }
-        if (isNaN(phasor))
-        {
-            alert("phasor is not numeric");
-        }
-        else 
-        {
-	       
-            
-            if(phasor < 0)
-            {
-                alert("Phasor has to be bigger than 0");
-            }
-        }
-        if (isNaN(rate))
-        {
-            alert("rate is not numeric");
-        }
-        else
-        {
-           
-
-            if(rate < 0)
-            {
-                alert("rate has to be bigger than 0");
-            }
-        }
-
-        
-                          
-                  
-        var alertValue = "Saved \n Cycle: " + cycles + "\n Freq: " + freq + "\n" +
-                 "Phase: " + phase + "\n" +
-                 "Phasor: " + phasor + "\n" +
-                 "Sms: " + sms + "\n" +
-                 "Type: " + type + "\n" +
-                 "Name: " + name + "\n" +
-                 "Rate: " + rate;
-      alert(alertValue);
+    
+    if (isNaN(cycles) || Number(cycles) <= 0) {
+        alert("Error: 'cycles' must be a numeric value greater than 0.");
+        return;
     }
+
+    if (isNaN(phasor) || Number(phasor) <= 0) {
+        alert("Error: 'phasor' must be a numeric value greater than 0.");
+        return;
+    }
+
+   
+    if (isNaN(rate) || Number(rate) <= 0) {
+        alert("Error: 'rate' must be a numeric value greater than 0.");
+        return;
+    }
+
+    var alertValue = "Saved \n Cycle: " + cycles + "\n Freq: " + freq + "\n" +
+        "Phase: " + phase + "\n" +
+        "Phasor: " + phasor + "\n" +
+        "Sms: " + sms + "\n" +
+        "Type: " + type + "\n" +
+        "Name: " + name + "\n" +
+        "Rate: " + rate;
+    alert(alertValue);
+}
+
 
   </script>
     <table>
