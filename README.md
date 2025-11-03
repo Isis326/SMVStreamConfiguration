@@ -10,13 +10,11 @@ How to Run the Web Page
 
 CMD: Navigate to your project folder smvConfiguratorWebPage using the commands:
 
-cd ,,
-
 cd ..
 
 cd Users
 
-cd IsisFumero
+cd 'Username'
 
 cd Desktop
 
@@ -24,7 +22,6 @@ cd smvConfiguratorWebPage
 
 
 
-To run locallySs : http://localhost:8000/
-
-
+To run locallySs : php -S localhost:8000
+Open the browser and enter http://localhost:8000/
 
