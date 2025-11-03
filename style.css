@@ -1,0 +1,39 @@
+﻿  h1 {
+      text-align: center;
+      font-weight: normal;
+      color: #012C6D;
+    }
+
+    table {
+      border-collapse: separate;
+      border-spacing: 0px 20px;
+      margin-left: 150px;       
+      font-family: sans-serif;
+    }
+
+    input[type="text"] {
+      width: 400px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    select[type="s1"] {
+      width: 419px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: sans-serif;
+      background-color: white;
+    }
+    button[type="submit"] {             
+      width: 100px;
+      padding: 10px 20px;
+      background-color:  #B1B5B3;
+      color: #000000;           
+      text-transform: lowercase;
+      border: 1px solid #bbb;
+      border-radius: 20px;
+      cursor: pointer;
+     
+
+    }

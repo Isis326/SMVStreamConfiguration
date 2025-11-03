@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "definitions": {
+    "DataType": {
+      "enum": [
+        "INT32",
+        "INT64",
+        "FLOAT64",
+        "FLOAT32",
+        "UINT64",
+        "UINT32"
+      ],
+      "type": "string"
+    },
+    "SMVStreamConfiguration": {
+      "properties": {
+        "cycles_per_phasor_sample": {
+          "description": "The number of cycles to aggregate before publishing the phasor",
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "freq_datapoint_name": {
+          "default": null,
+          "description": "Datapoint name to publish the frequency",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phase_datapoint_name": {
+          "default": null,
+          "description": "Datapoint name to publish the phase",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phasor_frequency": {
+          "description": "Frequency of the stream",
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "rms_datapoint_name": {
+          "default": null,
+          "description": "Datapoint name to publish the RMS",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "smv_data_type": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/DataType"
+            }
+          ],
+          "description": "The type of data in the SMV stream"
+        },
+        "smv_datapoint_name": {
+          "description": "Name of the subscribed datapoint which contains the SMV stream",
+          "type": "string"
+        },
+        "smv_sample_rate": {
+          "description": "Number of samples per second in the stream",
+          "format": "uint",
+          "minimum": 0.0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "cycles_per_phasor_sample",
+        "phasor_frequency",
+        "smv_data_type",
+        "smv_datapoint_name",
+        "smv_sample_rate"
+      ],
+      "type": "object"
+    }
+  },
+  "properties": {
+    "streams": {
+      "items": {
+        "$ref": "#/definitions/SMVStreamConfiguration"
+      },
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "streams"
+  ],
+  "schema_version": "0.0.1",
+  "title": "ConfigModel",
+  "type": "object",
+  "version": "0.1.0"
+}
